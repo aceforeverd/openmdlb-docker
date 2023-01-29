@@ -3,6 +3,7 @@
 
 FROM debian:bullseye
 
+# listen port
 ARG PORT=9527
 # If non-empty, given directory will used as openmldb release artifact (the top directory extracted from release),
 # instead of downloading from release page.
