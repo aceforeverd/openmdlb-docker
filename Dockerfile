@@ -13,11 +13,11 @@ LABEL org.opencontainers.image.source=https://github.com/aceforeverd/openmldb-do
 
 WORKDIR /root
 
-ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v0.7.1/openmldb-0.7.1-linux.tar.gz} ./
+ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v0.7.3/openmldb-0.7.3-linux.tar.gz} ./
 
 RUN if [ -z ${OPENMLDB_ART} ] ; then tar xzf openmldb-*.tar.gz --strip-components=1 && rm -f openmldb-*.tar.gz; fi
 
-ENV OPENMLDB_VER=0.7.1
+ENV OPENMLDB_VER=0.7.3
 
 EXPOSE ${PORT}
 
