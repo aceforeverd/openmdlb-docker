@@ -1,7 +1,7 @@
 # OpenMLDB server image.
 # Use this image to run a openmldb nameserver or tablet.
 
-FROM debian:bullseye
+FROM debian:bullseye-slim
 
 # listen port
 ARG PORT=9527
@@ -11,7 +11,7 @@ ARG OPENMLDB_ART
 
 LABEL org.opencontainers.image.source=https://github.com/aceforeverd/openmldb-docker
 
-WORKDIR /root
+WORKDIR /opt/openmldb
 
 ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v0.7.3/openmldb-0.7.3-linux.tar.gz} ./
 
