@@ -19,6 +19,10 @@ ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v${O
 
 RUN if [ -z ${OPENMLDB_ART} ] ; then tar xzf openmldb-*.tar.gz --strip-components=1 && rm -f openmldb-*.tar.gz; fi
 
+VOLUME [ "/var/lib/openmldb/", "/usr/local/lib" ]
+
+COPY entrypoint.sh .
+
 EXPOSE ${PORT}
 
 # NOTE: Must pass necessary flags, or the container will simply exit.
@@ -27,4 +31,4 @@ EXPOSE ${PORT}
 # - --role
 # - --zk_cluster
 # - --zk_root_path
-ENTRYPOINT ["./bin/openmldb" ]
+ENTRYPOINT [ "./entrypoint.sh" ]
