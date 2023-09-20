@@ -63,7 +63,7 @@ services:
     build: .
     volumes:
       - tablet1-data:/var/lib/openmldb
-      - lib-data:/usr/local/lib
+      - lib-data:/opt/openmldb/udf
     command:
       - --
       - "--role=tablet"
@@ -78,7 +78,7 @@ services:
     build: .
     volumes:
       - tablet2-data:/var/lib/openmldb
-      - lib-data:/usr/local/lib
+      - lib-data:/opt/openmldb/udf
     command:
       - --
       - "--role=tablet"
@@ -93,7 +93,7 @@ services:
     build: .
     volumes:
       - tablet3-data:/var/lib/openmldb
-      - lib-data:/usr/local/lib
+      - lib-data:/opt/openmldb/udf
     command:
       - --
       - "--role=tablet"

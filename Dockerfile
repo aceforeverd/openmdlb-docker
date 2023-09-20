@@ -19,7 +19,7 @@ ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v${O
 
 RUN if [ -z ${OPENMLDB_ART} ] ; then tar xzf openmldb-*.tar.gz --strip-components=1 && rm -f openmldb-*.tar.gz; fi
 
-VOLUME [ "/var/lib/openmldb/", "/usr/local/lib" ]
+VOLUME [ "/var/lib/openmldb/", "/opt/openmldb/udf/" ]
 
 COPY entrypoint.sh .
 
