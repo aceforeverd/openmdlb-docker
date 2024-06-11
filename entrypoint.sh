@@ -10,7 +10,7 @@ if [ ! -d "$PREFIX" ]; then
     mkdir -p "$PREFIX"
 fi
 
-exec ./bin/openmldb \
+exec /opt/openmldb/bin/openmldb \
     --db_root_path="$PREFIX/db" \
     --recycle_bin_root_path="$PREFIX/recycle" \
     --hdd_root_path="$PREFIX/db_hdd" \
