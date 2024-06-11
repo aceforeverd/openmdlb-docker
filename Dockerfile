@@ -13,7 +13,7 @@ LABEL org.opencontainers.image.source=https://github.com/aceforeverd/openmldb-do
 
 WORKDIR /opt/openmldb
 
-ENV OPENMLDB_VER=0.8.5
+ENV OPENMLDB_VER=0.9.0
 
 ADD ${OPENMLDB_ART:-https://github.com/4paradigm/OpenMLDB/releases/download/v${OPENMLDB_VER}/openmldb-${OPENMLDB_VER}-linux.tar.gz} ./
 
